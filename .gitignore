@@ -1,4 +1,6 @@
 .vscode/
+#.editorconfig
+setup_older.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

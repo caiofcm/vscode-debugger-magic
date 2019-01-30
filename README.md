@@ -1,10 +1,8 @@
 # Vscode-Debugger-Magic
 
-Attach a debugging session of visual studio code to the jupyter notebook 
+Attach a debugging session of visual studio code to the jupyter notebook
 
 ## Install
-
-Todo
 
 ```
 pip install vscode-debugger-magic
@@ -12,13 +10,19 @@ pip install vscode-debugger-magic
 
 ## Usage
 
-1. Run the magic in jupyter notebook
+- Load the magic extension:
+
+```
+%load_ext vscode_debugger_magic
+```
+
+- Run the magic in jupyter notebook
 
 ```
 %vscodedebugger
 ```
 
-2. Activate the debugging session in Visual studio code in the Python attached mode:
+- Activate the debugging session in Visual studio code in the Python attached mode:
 
 ```json
 {
@@ -30,6 +34,6 @@ pip install vscode-debugger-magic
 },
 ```
 
-3. Set breakpoints
-4. Invoke functions to be debugged
+- Set breakpoints in vscode
+- Invoke functions to be debugged
 

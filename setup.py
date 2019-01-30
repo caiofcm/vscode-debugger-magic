@@ -1,37 +1,30 @@
-from setuptools import setup
-from codecs import open
-from os import path
+import pathlib
+from setuptools import setup, find_packages
 
-with open(path.join(path.abspath(path.dirname(__file__)), 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
+# The directory containing this file
+HERE = pathlib.Path(__file__).parent
 
+# The text of the README file
+README = (HERE / "README.md").read_text()
+
+# This call to setup() does all the work
 setup(
-    name='vscode_debugger_magic',
-    version='0.1',
-    description='Magic for Vscode debugging from Jupyter notebook',
-    long_description=long_description,
+    name="vscode-debugger-magic",
+    version="1.1.0",
+    description="A Ipython (Jupyter) magic for attaching a debugging session on VSCode ",
+    long_description=README,
+    long_description_content_type="text/markdown",
+    url="https://github.com/caiofcm/vscode-debugger-magic",
     author='Caio Marcellos',
     author_email='caiocuritiba@gmail.com',
-    packages=['vscode_debugger_magic'],
-    install_requires=['ipython'],
-    include_package_data=True,
+    license="MIT",
     classifiers=[
-        'Development Status :: 4 - Beta',
-
-        'Intended Audience :: Developers',
-        'Intended Audience :: Education',
-        'Intended Audience :: Science/Research',
-        
-        'License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)',
-        'Operating System :: OS Independent',
-
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
     ],
-    keywords = 'vscode code jupyter notebook debugging',
-    project_urls={
-        # 'Source': 'https://github.com/MiniZinc/iminizinc/',
-        # 'Tracker': 'https://github.com/MiniZinc/iminizinc/issues',
-    },
+    # packages=["vscode_debugger_magic"],
+    packages=find_packages(exclude=("tests",)),
+    include_package_data=True,
+    install_requires=["ipython"],
 )
