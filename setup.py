@@ -26,5 +26,5 @@ setup(
     # packages=["vscode_debugger_magic"],
     packages=find_packages(exclude=("tests",)),
     include_package_data=True,
-    install_requires=["ipython"],
+    install_requires=["ipython", "ptvsd"],
 )
