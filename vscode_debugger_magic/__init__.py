@@ -1,5 +1,5 @@
-"""An example magic"""
-__version__ = '1.1.0'
+"""VSCode Debugger Magic"""
+__version__ = '1.2.0'
 
 from .vscode_debugger_magic import VsCodeDebugger
 

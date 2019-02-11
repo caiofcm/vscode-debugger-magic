@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="vscode-debugger-magic",
-    version="1.1.0",
+    version="1.2.0",
     description="A Ipython (Jupyter) magic for attaching a debugging session on VSCode ",
     long_description=README,
     long_description_content_type="text/markdown",

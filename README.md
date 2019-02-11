@@ -37,3 +37,10 @@ pip install vscode-debugger-magic
 - Set breakpoints in vscode
 - Invoke functions to be debugged
 
+## Option:
+
+- `--timeout`or `-t` seconds: timeout to attach debugger
+
+```
+%vscodedebugger -t 10
+```
