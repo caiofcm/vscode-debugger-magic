@@ -1,6 +1,6 @@
 import ptvsd
 
-def start(timeout_sec):
+def start(timeout_sec = None):
     if not ptvsd.is_attached():
         # 5678 is the default attach port in the VS Code debug configurations
         print("Waiting for debugger attach from VsCode")

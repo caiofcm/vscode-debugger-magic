@@ -1,6 +1,6 @@
 # Vscode-Debugger-Magic
 
-Attach a debugging session of visual studio code to the jupyter notebook
+Attach a debugging session of visual studio code to the jupyter notebook and also for node-red (within a python-function node)
 
 ## Install
 
@@ -8,7 +8,7 @@ Attach a debugging session of visual studio code to the jupyter notebook
 pip install vscode-debugger-magic
 ```
 
-## Usage
+## Jupyter Notebook Usage
 
 - Load the magic extension:
 
@@ -44,3 +44,25 @@ pip install vscode-debugger-magic
 ```
 %vscodedebugger -t 10
 ```
+
+## Node-red Usage
+
+Example of a python-function node:
+
+```python
+import hello_module
+
+from vscode_debugger_magic import start
+start()
+
+msg['first'] = 'Caio'
+msg['last'] = 'Marcellos'
+
+m = hello_module.hello(msg)
+
+msg['payload'] = m
+
+return msg
+```
+
+After execution proceed to VSCode and attach to the process as in the jupyter case.
